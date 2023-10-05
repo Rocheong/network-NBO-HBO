@@ -21,6 +21,6 @@ int main(void){
 	}
 	FILE *wp;//파일포인터 
 	wp=fopen(".\\파일2.bin","wb");//파일을 쓰기모드로 연다 
-	fwrite(&little,4,1,wp);//파일에 리틀에 저장된 것을 4바이트씩 1번 넣는다. 
+	fwrite(&little,sizeof(char)*4,1,wp);//파일에 리틀에 저장된 것을 4바이트씩 1번 넣는다. 
 	fclose(wp);//파일 닫기 
 }
